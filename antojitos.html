@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antojitos - Tu NuevoRestaurante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Lato', sans-serif;
+            --color-text: #363636;
+            --color-title: #bfa98e;
+            --color-background: #ffffff;
+        }
+        body { font-family: var(--font-sans); color: var(--color-text); background-color: var(--color-background); }
+        h1, h2, h3 { font-family: var(--font-serif); }
+        .banner { height: 40vh; background-size: cover; background-position: center; position: relative; }
+        .banner-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; }
+        .banner-text h1 { font-size: 3.5rem; font-weight: bold; color: white; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="banner" style="background-image: url('https://placehold.co/1200x400/D6C0A7/705A3E?text=Antojitos');">
+        <div class="banner-overlay">
+            <div class="banner-text text-center">
+                <h1>Antojitos</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <nav class="flex justify-between items-center mb-12">
+            <a href="index.html" class="text-gray-500 hover:text-gray-800 transition">&larr; Volver al Inicio</a>
+            <div class="flex space-x-4 text-gray-800">
+                <a href="desayunos.html" class="hover:text-amber-600">Desayunos</a>
+                <a href="comidas.html" class="hover:text-amber-600">Comidas</a>
+                <a href="cenas.html" class="hover:text-amber-600">Cenas</a>
+                <a href="postres.html" class="hover:text-amber-600">Postres</a>
+                <a href="bebidas.html" class="hover:text-amber-600">Bebidas</a>
+            </div>
+        </nav>
+
+        <div class="text-center py-24">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Próximamente</h2>
+            <p class="text-gray-600 text-lg">Estamos trabajando en esta sección. ¡Vuelve pronto!</p>
+        </div>
+
+    </main>
+
+</body>
+</html>

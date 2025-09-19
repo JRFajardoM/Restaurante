@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comidas - Tu NuevoRestaurante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Lato', sans-serif;
+            --color-text: #363636;
+            --color-title: #bfa98e;
+            --color-background: #ffffff;
+        }
+        body { font-family: var(--font-sans); color: var(--color-text); background-color: var(--color-background); }
+        h1, h2, h3 { font-family: var(--font-serif); }
+        .banner { height: 40vh; background-size: cover; background-position: center; position: relative; }
+        .banner-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; }
+        .banner-text h1 { font-size: 3.5rem; font-weight: bold; color: white; }
+        .menu-item-card { border: 1px solid #eee; border-radius: 0.5rem; overflow: hidden; transition: box-shadow 0.3s; }
+        .menu-item-card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .menu-item-image { width: 100%; height: 250px; object-fit: cover; }
+        .price-tag { font-weight: bold; color: var(--color-title); }
+        .old-price { text-decoration: line-through; color: #999; }
+        .discount-badge { background-color: #ef4444; color: white; font-size: 0.8rem; font-weight: bold; padding: 0.2rem 0.5rem; border-radius: 0.25rem; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="banner" style="background-image: url('https://file.garden/Z8NltLNFC1q_3W8R/comidas_banner.jpg');">
+        <div class="banner-overlay">
+            <div class="banner-text text-center">
+                <h1>Comidas</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <nav class="flex justify-between items-center mb-12">
+            <a href="index.html" class="text-gray-500 hover:text-gray-800 transition">&larr; Volver al Inicio</a>
+            <div class="flex space-x-4 text-gray-800">
+                <a href="desayunos.html" class="hover:text-amber-600">Desayunos</a>
+                <a href="cenas.html" class="hover:text-amber-600">Cenas</a>
+                <a href="antojitos.html" class="hover:text-amber-600">Antojitos</a>
+                <a href="postres.html" class="hover:text-amber-600">Postres</a>
+                <a href="bebidas.html" class="hover:text-amber-600">Bebidas</a>
+            </div>
+        </nav>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Sopa de Tortilla -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Comida1.jpeg" alt="Sopa de Tortilla" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Sopa de Tortilla</h3>
+                    <p class="text-gray-600 mb-4">Caldo de jitomate con tiras de tortilla frita, aguacate, queso y crema.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$110.00</span>
+                            <span class="old-price text-lg ml-2">$120.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            8% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tacos al Pastor -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Comida2.jpeg" alt="Tacos al Pastor" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Tacos al Pastor</h3>
+                    <p class="text-gray-600 mb-4">Carne de cerdo marinada en achiote, servidos con piña, cilantro y cebolla.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$135.00</span>
+                            <span class="old-price text-lg ml-2">$150.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            10% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Corte de Carne -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Comida3.jpeg" alt="Corte de Carne" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Corte de Carne</h3>
+                    <p class="text-gray-600 mb-4">Jugoso corte de carne a la parrilla.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$250.00</span>
+                            <span class="old-price text-lg ml-2">$300.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            17% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pasta Alfredo -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Comida4.jpeg" alt="Pasta Alfredo" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Pasta Alfredo</h3>
+                    <p class="text-gray-600 mb-4">Pasta con cremosa salsa Alfredo.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$190.00</span>
+                            <span class="old-price text-lg ml-2">$220.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            14% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hamburguesa Especial -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Comida5.jpeg" alt="Hamburguesa Especial" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Hamburguesa Especial</h3>
+                    <p class="text-gray-600 mb-4">Hamburguesa con ingredientes de la casa.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$170.00</span>
+                            <span class="old-price text-lg ml-2">$200.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            15% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ensalada César -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Comida6.jpeg" alt="Ensalada César" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Ensalada César</h3>
+                    <p class="text-gray-600 mb-4">Clásica ensalada César con pollo.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$150.00</span>
+                            <span class="old-price text-lg ml-2">$180.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            17% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pescado Frito -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Comida7.jpeg" alt="Pescado Frito" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Pescado Frito</h3>
+                    <p class="text-gray-600 mb-4">Pescado del día, frito y crujiente.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$200.00</span>
+                            <span class="old-price text-lg ml-2">$240.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            17% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pollo a la Naranja -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Comida8.jpeg" alt="Pollo a la Naranja" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Pollo a la Naranja</h3>
+                    <p class="text-gray-600 mb-4">Pechuga de pollo en salsa de naranja.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$195.00</span>
+                            <span class="old-price text-lg ml-2">$230.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            15% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pizza Margarita -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Comida9.jpeg" alt="Pizza Margarita" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Pizza Margarita</h3>
+                    <p class="text-gray-600 mb-4">Pizza con salsa de tomate, mozzarella y albahaca.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$180.00</span>
+                            <span class="old-price text-lg ml-2">$210.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            14% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

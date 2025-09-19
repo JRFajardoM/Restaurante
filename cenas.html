@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cenas - Tu NuevoRestaurante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Lato', sans-serif;
+            --color-text: #363636;
+            --color-title: #bfa98e;
+            --color-background: #ffffff;
+        }
+        body { font-family: var(--font-sans); color: var(--color-text); background-color: var(--color-background); }
+        h1, h2, h3 { font-family: var(--font-serif); }
+        .banner { height: 40vh; background-size: cover; background-position: center; position: relative; }
+        .banner-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; }
+        .banner-text h1 { font-size: 3.5rem; font-weight: bold; color: white; }
+        .menu-item-card { border: 1px solid #eee; border-radius: 0.5rem; overflow: hidden; transition: box-shadow 0.3s; }
+        .menu-item-card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .menu-item-image { width: 100%; height: 250px; object-fit: cover; }
+        .price-tag { font-weight: bold; color: var(--color-title); }
+        .old-price { text-decoration: line-through; color: #999; }
+        .discount-badge { background-color: #ef4444; color: white; font-size: 0.8rem; font-weight: bold; padding: 0.2rem 0.5rem; border-radius: 0.25rem; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="banner" style="background-image: url('https://file.garden/Z8NltLNFC1q_3W8R/cenas_banner.jpg');">
+        <div class="banner-overlay">
+            <div class="banner-text text-center">
+                <h1>Cenas</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <nav class="flex justify-between items-center mb-12">
+            <a href="index.html" class="text-gray-500 hover:text-gray-800 transition">&larr; Volver al Inicio</a>
+            <div class="flex space-x-4 text-gray-800">
+                <a href="desayunos.html" class="hover:text-amber-600">Desayunos</a>
+                <a href="comidas.html" class="hover:text-amber-600">Comidas</a>
+                <a href="antojitos.html" class="hover:text-amber-600">Antojitos</a>
+                <a href="postres.html" class="hover:text-amber-600">Postres</a>
+                <a href="bebidas.html" class="hover:text-amber-600">Bebidas</a>
+            </div>
+        </nav>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Salmón a la Parrilla -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Cena1.jpeg" alt="Salmón a la Parrilla" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Salmón a la Parrilla</h3>
+                    <p class="text-gray-600 mb-4">Filete de salmón fresco a la parrilla, servido con espárragos y puré de papa.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$250.00</span>
+                            <span class="old-price text-lg ml-2">$280.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            11% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filete Mignon -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Cena2.jpeg" alt="Filete Mignon" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Filete Mignon</h3>
+                    <p class="text-gray-600 mb-4">Tierno filete de res en salsa de vino tinto.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$300.00</span>
+                            <span class="old-price text-lg ml-2">$350.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            14% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

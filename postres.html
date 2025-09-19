@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postres - Tu NuevoRestaurante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Lato', sans-serif;
+            --color-text: #363636;
+            --color-title: #bfa98e;
+            --color-background: #ffffff;
+        }
+        body { font-family: var(--font-sans); color: var(--color-text); background-color: var(--color-background); }
+        h1, h2, h3 { font-family: var(--font-serif); }
+        .banner { height: 40vh; background-size: cover; background-position: center; position: relative; }
+        .banner-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; }
+        .banner-text h1 { font-size: 3.5rem; font-weight: bold; color: white; }
+        .menu-item-card { border: 1px solid #eee; border-radius: 0.5rem; overflow: hidden; transition: box-shadow 0.3s; }
+        .menu-item-card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .menu-item-image { width: 100%; height: 250px; object-fit: cover; }
+        .price-tag { font-weight: bold; color: var(--color-title); }
+        .old-price { text-decoration: line-through; color: #999; }
+        .discount-badge { background-color: #ef4444; color: white; font-size: 0.8rem; font-weight: bold; padding: 0.2rem 0.5rem; border-radius: 0.25rem; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="banner" style="background-image: url('https://file.garden/Z8NltLNFC1q_3W8R/postres_banner.jpg');">
+        <div class="banner-overlay">
+            <div class="banner-text text-center">
+                <h1>Postres</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <nav class="flex justify-between items-center mb-12">
+            <a href="index.html" class="text-gray-500 hover:text-gray-800 transition">&larr; Volver al Inicio</a>
+            <div class="flex space-x-4 text-gray-800">
+                <a href="desayunos.html" class="hover:text-amber-600">Desayunos</a>
+                <a href="comidas.html" class="hover:text-amber-600">Comidas</a>
+                <a href="cenas.html" class="hover:text-amber-600">Cenas</a>
+                <a href="antojitos.html" class="hover:text-amber-600">Antojitos</a>
+                <a href="bebidas.html" class="hover:text-amber-600">Bebidas</a>
+            </div>
+        </nav>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Pastel de Chocolate -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Postres1.jpeg" alt="Pastel de Chocolate" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Pastel de Chocolate</h3>
+                    <p class="text-gray-600 mb-4">Rebanada de nuestro famoso pastel de chocolate.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$100.00</span>
+                            <span class="old-price text-lg ml-2">$120.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            17% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flan Napolitano -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Postres2.jpeg" alt="Flan Napolitano" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Flan Napolitano</h3>
+                    <p class="text-gray-600 mb-4">Flan casero con caramelo.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$70.00</span>
+                            <span class="old-price text-lg ml-2">$80.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            13% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tiramisú -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Postres3.jpeg" alt="Tiramisú" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Tiramisú</h3>
+                    <p class="text-gray-600 mb-4">Postre italiano con café y queso mascarpone.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$90.00</span>
+                            <span class="old-price text-lg ml-2">$110.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            18% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cheesecake de Fresa -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Postres4.jpeg" alt="Cheesecake de Fresa" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Cheesecake de Fresa</h3>
+                    <p class="text-gray-600 mb-4">Cremoso cheesecake con mermelada de fresa.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$110.00</span>
+                            <span class="old-price text-lg ml-2">$130.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            15% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Helado Artesanal -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Postres5.jpeg" alt="Helado Artesanal" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Helado Artesanal</h3>
+                    <p class="text-gray-600 mb-4">Dos bolas de helado de tu sabor preferido.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$75.00</span>
+                            <span class="old-price text-lg ml-2">$90.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            17% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mousse de Maracuyá -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Postres6.jpeg" alt="Mousse de Maracuyá" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Mousse de Maracuyá</h3>
+                    <p class="text-gray-600 mb-4">Ligero y refrescante mousse de fruta de la pasión.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$85.00</span>
+                            <span class="old-price text-lg ml-2">$100.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            15% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crepas de Cajeta -->
+            <div class="menu-item-card bg-white">
+                <img src="https://file.garden/Z8NltLNFC1q_3W8R/Postres7.jpeg" alt="Crepas de Cajeta" class="menu-item-image">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Crepas de Cajeta</h3>
+                    <p class="text-gray-600 mb-4">Rellenas de cajeta y cubiertas con nuez.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="price-tag text-2xl">
+                            <span>$100.00</span>
+                            <span class="old-price text-lg ml-2">$120.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            17% OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
